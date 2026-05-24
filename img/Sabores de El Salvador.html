@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<!-- saved from url=(0071)file:///C:/Users/MINEDUCYT/Documents/gastronomia-sv/index.html#nosotros -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabores de El Salvador</title>
+     <!-- CSS -->
+    <link rel="stylesheet" href="./Sabores de El Salvador_files/style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link href="./Sabores de El Salvador_files/css2" rel="stylesheet">
+
+</head>
+<body>
+    <!--cabecera del HEADER-->
+    <header class="header--">
+        <nav class="navbar">
+             <h1 class="logo">Sabores SV</h1>
+             <ul class="menu">
+                <li><a href="file:///C:/Users/MINEDUCYT/Documents/gastronomia-sv/index.html#inicio">Inicio</a></li>
+                <li><a href="file:///C:/Users/MINEDUCYT/Documents/gastronomia-sv/index.html#nosotros">Nosotros</a></li>
+                <li><a href="file:///C:/Users/MINEDUCYT/Documents/gastronomia-sv/index.html#platillos">Platillos</a></li>
+                <li><a href="file:///C:/Users/MINEDUCYT/Documents/gastronomia-sv/index.html#galeria">Galería</a></li>
+                <li><a href="file:///C:/Users/MINEDUCYT/Documents/gastronomia-sv/index.html#reserva"></a></li>
+             </ul>
+
+             <button id="modoOscuro"></button>
+        </nav>
+    </header>
+    <!--parte principal MAIN---->
+    <main>
+        <section id="Inicio" class="hero">
+            <div class="hero-texto">
+                <h2>Disfruta los mejores sabores de El Salvador</h2>
+                <p>
+                    Pupusas, tamales, yuca frita y mucho más.
+                </p>
+                <button id="verMenu">
+                    Ver menú
+                </button>
+            </div>
+        </section>
+        <!-- SOBRE NOSOTROS-->
+        <section id="nosotros" class="nosotros">
+            <h2>Sobre nosotros</h2>
+            <p>
+                Somos un resturante salvadoreño dedicado a conservar las recetas tradicionales de nuestra cultura gastronomica. Utilizamos ingredientes frescoa y autenticos para ofrecer la mejor experiencia culinaria.
+            </p>
+        </section>
+        <!--PLATILLOS CASEROS-->
+        <section id="platillos" class="platillos">
+            <h2>Nuestros Platillos</h2>
+            <div class="contenedor-cards">
+                <!--CARD 2-->
+                <article class="card">
+                    <img src="./Sabores de El Salvador_files/pupusas.webp" alt="Pupusas">
+                    <h3>Pupusas Revueltas</h3>
+                    <p>
+                        Deliciosas pupusas tradionales con queso, frijoes y chicaharon.
+                    </p>
+                    <span>$1.25</span>
+                </article>
+
+                <!--CARD 2-->
+                <article class="card">
+                    <img src="./Sabores de El Salvador_files/yuca.jpg" alt="Yuca Frita">
+                    <h3>Yuca Frita</h3>
+                    <p>
+                        Crujiente yuca frita acompañada de cutido y salsa casera.
+                    </p>
+                    <span>$3.50</span>
+                </article>
+
+                <!--CARD 3-->
+                <article class="card">
+                    <img src="./Sabores de El Salvador_files/tamales.webp" alt="Tamales">
+                    <h3>Tamales</h3>
+                    <p>
+                        Tamales salvadoreños preparados con recettas tradicionales de nuestras abuelas, para conservar los sabores de antaño.
+                    </p>
+                    <span>$2.00</span>
+                </article>
+            </div>
+        </section>
+
+        <!--NUESTRA HISTORIA / NUESTROS INGREDIENTES-->
+        <aside class="ingredientes">
+            <h2>Ingredientes Tradicionales</h2>
+            <p>
+                El maíz es uno de los ingredientes más importantes en la gastronomia salvadoreña. Desde tiempos ancestrales ha sido utilizado para preparar pupusas, tamales y atol.
+            </p>
+        </aside>
+
+        <!--GALERIA-->
+        <section id="galeria" class="galeria">
+            <h2>Galería</h2>
+            <div class="imagenes-galeria">
+                <img src="./Sabores de El Salvador_files/pupusas.webp" alt="Pupusas">
+                <img src="./Sabores de El Salvador_files/yuca.jpg" alt="Pupusas">
+                <img src="./Sabores de El Salvador_files/tamales.webp" alt="Pupusas">
+                <img src="./Sabores de El Salvador_files/restaurant.jpg" alt="Pupusas">
+            </div>
+        </section>
+
+        <!--FORMULARIO-->
+        <section id="reservas" class="reservas">
+            <h2>Reserva tu mesa</h2>
+            <form id="formulario">
+                <!--Nombre-->
+            <div class="grupo-formulario">
+                <label for="nombre">Reserva con nosotros</label>
+
+                <input type="text" id="nombre" aria-placeholder="Ingrese su nombre">
+            </div> 
+            <!--CORREO-->
+            <div class="grupo-formulario">
+                <label for="correo">Correo Electrónico</label>
+            
+            <input type="mail" id="correo" placeholder="Ingrese su correo">
+            </div>
+
+            <!--Fecha-->
+            <div class="grupo-formulario">
+                <label for="fecha">Fecha de Reservación</label>
+            <input type="date" id="fecha">
+            </div>
+           
+            <!--Persona-->
+            <div class="grupo-formulario">
+                <label for="personas">Cantidad de Personas</label>
+
+                <input type="number" id="personas" min="1" max="20">
+            </div>
+
+            <!--Boton-->
+            <button type="submit" class="btn-reservar">Reservar Mesa</button>
+
+            <!-- Mensaje-->
+             <p id="mensaje"></p>
+            </form>
+        </section>
+    </main>
+
+    <!--FOOTER-->
+    <footer class="footer">
+        <h3>Sabores de El Salvador</h3>
+        <p>
+            ©2026 Todos los derechos reservados
+        </p>
+        <div class="redes">
+            <a href="file:///C:/Users/MINEDUCYT/Documents/gastronomia-sv/index.html#">Facebook</a>
+            <a href="file:///C:/Users/MINEDUCYT/Documents/gastronomia-sv/index.html#">Instagram</a>
+            <a href="file:///C:/Users/MINEDUCYT/Documents/gastronomia-sv/index.html#">WhatsApp</a>
+        </div>
+    </footer>
+
+    <!--JavaScript-->
+    <script src="./Sabores de El Salvador_files/main.js"></script>
+
+</body></html>

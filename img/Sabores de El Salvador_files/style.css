@@ -1,0 +1,377 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ================= BODY ================= */
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff8f0;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* ================= HEADER ================= */
+
+.header{
+    background: linear-gradient(90deg, #8B0000, #c0392b);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+}
+
+/* ================= LOGO ================= */
+
+.logo{
+    color: #FFD700;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+/* ================= MENU ================= */
+
+.menu{
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+/* ===== AQUÍ ESTABA EL PROBLEMA ===== */
+
+.menu a{
+    text-decoration: none;
+    color: #FFD700;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.menu a:hover{
+    background-color: #FFD700;
+    color: black;
+}
+
+/* ================= BOTÓN MODO OSCURO ================= */
+
+#modoOscuro{
+    background-color: #FFD700;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+#modoOscuro:hover{
+    transform: scale(1.1);
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    height: 100vh;
+
+    background:
+    linear-gradient(
+    rgba(0,0,0,0.6),
+    rgba(0,0,0,0.6)
+    ),
+    url('img/hero.jpg');
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    color: white;
+}
+
+/* ================= HERO TEXTO ================= */
+
+.hero-texto{
+    background-color: rgba(0,0,0,0.7);
+    padding: 40px;
+    border-radius: 15px;
+    max-width: 700px;
+}
+
+.hero h2{
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.hero p{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+/* ================= BOTÓN HERO ================= */
+
+.hero button{
+    background-color: #FFD700;
+    color: black;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.hero button:hover{
+    transform: scale(1.05);
+}
+
+/* ================= SECCIONES ================= */
+
+section{
+    padding: 100px 10%;
+}
+
+section h2{
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 40px;
+    color: #8B0000;
+}
+
+/* ================= NOSOTROS ================= */
+
+.nosotros p{
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* ================= CARDS ================= */
+
+.contenedor-cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 30px;
+}
+
+/* ================= CARD ================= */
+
+.card{
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover{
+    transform: translateY(-10px);
+}
+
+.card img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.card h3{
+    padding: 15px;
+    color: #8B0000;
+}
+
+.card p{
+    padding: 0 15px;
+    line-height: 1.6;
+}
+
+.card span{
+    display: block;
+    padding: 15px;
+    font-weight: bold;
+    color: #228B22;
+}
+
+/* ================= INGREDIENTES ================= */
+
+.ingredientes{
+    background-color: #ffe4c4;
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.ingredientes p{
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* ================= GALERÍA ================= */
+
+.imagenes-galeria{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 20px;
+}
+
+.imagenes-galeria img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.imagenes-galeria img:hover{
+    transform: scale(1.05);
+}
+
+/* ================= FORMULARIO ================= */
+
+.reservas{
+    background-color: #fff3e0;
+}
+
+form{
+    max-width: 600px;
+    margin: auto;
+    background-color: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+/* ================= GRUPOS FORM ================= */
+
+.grupo-formulario{
+    margin-bottom: 20px;
+}
+
+.grupo-formulario label{
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.grupo-formulario input{
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+/* ================= BOTÓN RESERVAR ================= */
+
+.btn-reservar{
+    width: 100%;
+    padding: 15px;
+    background-color: #8B0000;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.btn-reservar:hover{
+    background-color: #a80000;
+}
+
+/* ================= MENSAJE ================= */
+
+#mensaje{
+    margin-top: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* ================= FOOTER ================= */
+
+.footer{
+    background-color: #8B0000;
+    color: white;
+    text-align: center;
+    padding: 40px;
+}
+
+.redes{
+    margin-top: 15px;
+}
+
+.redes a{
+    color: #FFD700;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+/* ================= MODO OSCURO ================= */
+
+.oscuro{
+    background-color: #121212;
+    color: white;
+}
+
+.oscuro .card{
+    background-color: #1e1e1e;
+    color: white;
+}
+
+.oscuro form{
+    background-color: #1e1e1e;
+    color: white;
+}
+
+.oscuro .ingredientes{
+    background-color: #222;
+}
+
+.oscuro section h2{
+    color: #FFD700;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:768px){
+
+    .navbar{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .menu{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero h2{
+        font-size: 35px;
+    }
+
+    .hero p{
+        font-size: 18px;
+    }
+
+    section{
+        padding: 80px 5%;
+    }
+
+}

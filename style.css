@@ -1,0 +1,410 @@
+:root {
+  --cream: #f5f0e8;
+  --ink: #1a1208;
+  --gold: #c8963e;
+  --gold-light: #e8b86d;
+  --rust: #8b3a1a;
+  --parchment: #ede8dd;
+  --shadow: rgba(26,18,8,0.15);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* ================= HEADER & NAVBAR ================= */
+
+header {
+    background: linear-gradient(90deg, #9e0707, #fd0808);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    background-color: #FFD700;
+    color: black;
+}
+
+#modoOscuro {
+    background-color: #FFD700;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+#modoOscuro:hover {
+    transform: scale(1.1);
+}
+
+/* ================= HERO ================= */
+
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('img/gastro.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-texto {
+    background-color: rgba(0,0,0,0.7);
+    padding: 40px;
+    border-radius: 15px;
+    max-width: 700px;
+}
+
+.hero h2 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.hero button {
+    background-color: #FFD700;
+    color: black;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.hero button:hover {
+    transform: scale(1.05);
+}
+
+/* ================= SECCIONES GENERALES ================= */
+
+section {
+    padding: 100px 10%;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 40px;
+    color: #8B0000;
+}
+
+.nosotros {
+    background-color: #f0cb93;
+}
+
+.nosotros p {
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* ================= PLATILLOS (CARDS) ================= */
+
+.contenedor-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.card-platillo {
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card-platillo:hover {
+    transform: translateY(-10px);
+}
+
+.card-platillo img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.card-platillo h3 {
+    padding: 15px;
+    color: #8B0000;
+}
+
+.card-platillo p {
+    padding: 0 15px;
+    line-height: 1.6;
+}
+
+.card-platillo span {
+    display: block;
+    padding: 15px;
+    font-weight: bold;
+    color: #e60808;
+}
+
+/* ================= INGREDIENTES & GALERÍA ================= */
+
+.ingredientes {
+    background-color: #ffe4c4;
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.ingredientes p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.imagenes-galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.imagenes-galeria img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.imagenes-galeria img:hover {
+    transform: scale(1.05);
+}
+
+/* ================= SECCIÓN RESERVAS & TARJETA ELEGANTE ================= */
+
+.reservas {
+    background-color: #fff3e0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-reserva {
+    background: #fff;
+    border-radius: 3px;
+    box-shadow: 0 8px 48px var(--shadow), 0 0 0 1px rgba(200,150,62,0.2);
+    width: 100%;
+    max-width: 440px;
+    overflow: hidden;
+}
+
+.card-header {
+    background: var(--ink);
+    padding: 2rem 2rem 1.6rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      45deg, transparent, transparent 18px,
+      rgba(200,150,62,0.06) 18px, rgba(200,150,62,0.06) 19px
+    );
+}
+
+.header-label {
+    font-size: 0.65rem;
+    font-weight: bold;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.45rem;
+}
+
+.card-header h1 { font-size: 2rem; color: var(--cream); line-height: 1.15; font-weight: normal; }
+.card-header h1 span { color: var(--gold-light); }
+
+.ornament { display: flex; align-items: center; gap: 0.5rem; margin-top: 1rem; }
+.ornament-line { flex: 1; height: 1px; background: linear-gradient(to right, transparent, var(--gold), transparent); }
+.ornament-diamond { width: 6px; height: 6px; background: var(--gold); transform: rotate(45deg); flex-shrink: 0; }
+
+.card-body { padding: 1.8rem 2rem 2rem; }
+.field { margin-bottom: 1.2rem; }
+
+label {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: bold;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--rust);
+    margin-bottom: 0.42rem;
+}
+
+input {
+    width: 100%;
+    padding: 0.68rem 0.9rem;
+    border: 1.5px solid var(--parchment);
+    border-radius: 2px;
+    background: var(--cream);
+    font-size: 0.95rem;
+    color: var(--ink);
+    outline: none;
+    transition: 0.2s;
+}
+
+input::placeholder { color: #bbb; }
+input:focus { border-color: var(--gold); background: #fff; box-shadow: 0 0 0 3px rgba(200,150,62,0.13); }
+input.error { border-color: #c0392b; background: #fff8f7; }
+
+.field-error {
+    font-size: 0.72rem;
+    color: #c0392b;
+    margin-top: 0.3rem;
+    display: none;
+}
+.field-error.visible { display: block; }
+
+.mesa-badge {
+    display: none;
+    margin-top: 0.4rem;
+    font-size: 0.76rem;
+    color: var(--rust);
+}
+.mesa-badge strong {
+    background: rgba(200,150,62,0.15);
+    border: 1px solid var(--gold-light);
+    border-radius: 2px;
+    padding: 0.1rem 0.5rem;
+    color: #7a5a10;
+    font-weight: bold;
+}
+
+.btn {
+    width: 100%;
+    padding: 0.88rem;
+    margin-top: 0.6rem;
+    background: var(--ink);
+    color: var(--gold-light);
+    font-family: Georgia, serif;
+    font-size: 1.05rem;
+    letter-spacing: 0.06em;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: 0.22s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+}
+.btn:hover { background: var(--rust); color: var(--cream); }
+.btn:active { transform: scale(0.99); }
+
+/* ── Confirmación de Reserva ── */
+.confirmacion {
+    display: none;
+    margin-top: 1.4rem;
+    background: linear-gradient(135deg, #fffdf7 0%, #fdf6e3 100%);
+    border: 1.5px solid var(--gold);
+    border-radius: 4px;
+    padding: 1.4rem 1.2rem 1.2rem;
+    text-align: center;
+    animation: aparecer 0.4s cubic-bezier(0.22,1,0.36,1) both;
+}
+
+@keyframes aparecer {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+.confirmacion.visible { display: block; }
+.conf-icono { font-size: 2rem; margin-bottom: 0.5rem; }
+.conf-nombre { font-size: 1.15rem; color: var(--ink); font-family: Georgia, serif; margin-bottom: 0.6rem; }
+.conf-nombre strong { color: var(--rust); }
+.conf-detalle { font-size: 0.9rem; color: #444; line-height: 1.7; margin-bottom: 0.8rem; }
+.conf-detalle span { display: block; }
+.conf-detalle b { color: var(--ink); }
+.conf-mesa { display: inline-block; background: var(--ink); color: var(--gold-light); font-family: Georgia, serif; font-size: 1rem; padding: 0.35rem 1.1rem; border-radius: 2px; margin-bottom: 1rem; }
+.conf-despedida { font-family: Georgia, serif; font-size: 1rem; color: var(--rust); font-style: italic; border-top: 1px solid var(--parchment); padding-top: 0.8rem; margin-top: 0.2rem; }
+
+/* ================= FOOTER ================= */
+
+.footer {
+    background-color: #8B0000;
+    color: white;
+    text-align: center;
+    padding: 40px;
+}
+
+.redes { margin-top: 15px; }
+.redes a { color: #FFD700; text-decoration: none; margin: 0 10px; font-weight: bold; }
+
+/* ================= CONFIGURACIÓN MODO OSCURO ================= */
+
+/*.oscuro { background-color: #121212; color: white; }
+.oscuro .card-platillo, .oscuro .card-reserva { background-color: #1e1e1e; color: white; }
+.oscuro .ingredientes { background-color: #222; }
+.oscuro section h2 { color: #FFD700; }
+*/
+
+.oscuro .card-platillo, .oscuro .card-reserva {
+    background-color: #1e1e1e;
+    color: white;
+}
+/* ================= MEDIA QUERIES (RESPONSIVE) ================= */
+
+@media(max-width:768px){
+    .navbar { flex-direction: column; gap: 20px; }
+    .menu { flex-direction: column; align-items: center; }
+    .hero h2 { font-size: 35px; }
+    .hero p { font-size: 18px; }
+    section { padding: 80px 5%; }
+}
+
